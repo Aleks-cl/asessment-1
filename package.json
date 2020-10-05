@@ -7,10 +7,10 @@
   },
   "engines": {
     "node": "^12.18.3",
-    "npm": "^6.00.0n"
+    "npm": "^6.00.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.0",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -21,7 +21,7 @@
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
   },
-  "description": "��#\u0000 \u0000a\u0000s\u0000e\u0000s\u0000s\u0000m\u0000e\u0000n\u0000t\u0000-\u00001\u0000\r\u0000 \u0000#\u0000 \u0000A\u0000s\u0000s\u0000e\u0000s\u0000s\u0000m\u0000e\u0000n\u0000t\u0000_\u00001\u0000_\u0000a\u0000l\u0000e\u0000k\u0000s\u0000a\u0000d\u0000e\u0000r\u0000_\u0000c\u0000-\u0000L\u0000\r\u0000 \u0000#\u0000 \u0000A\u0000s\u0000s\u0000e\u0000s\u0000s\u0000m\u0000e\u0000n\u0000t\u0000_\u00001\u0000_\u0000a\u0000l\u0000e\u0000k\u0000s\u0000a\u0000d\u0000e\u0000r\u0000_\u0000c\u0000-\u0000L\u0000\r\u0000 \u0000#\u0000 \u0000A\u0000s\u0000s\u0000e\u0000s\u0000s\u0000m\u0000e\u0000n\u0000t\u0000_\u00001\u0000_\u0000a\u0000l\u0000e\u0000k\u0000s\u0000a\u0000d\u0000e\u0000r\u0000_\u0000c\u0000-\u0000L\u0000\r\u0000 \u0000#\u0000 \u0000a\u0000s\u0000e\u0000s\u0000s\u0000m\u0000e\u0000n\u0000t\u0000-\u00001\u0000\r\u0000 \u0000",
+  "description": "asessment1",
   "main": "app.js",
   "devDependencies": {},
   "repository": {
