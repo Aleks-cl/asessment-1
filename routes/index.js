@@ -6,12 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 /* GET Home page. */
-router.get('/Home', function(req, res, next) {
+router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 /* GET About me page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About Me' });
+  res.render('index', { title: 'About_Me' });
 });
 /* GET Products page. */
 router.get('/products', function(req, res, next) {
@@ -23,6 +23,6 @@ router.get('/survices', function(req, res, next) {
 });
 /* GET Contact me page. */
 router.get('/Contact', function(req, res, next) {
-  res.render('index', { title: 'Contact information' });
+  res.render('index', { title: 'Contact_information' });
 });
 module.exports = router;
