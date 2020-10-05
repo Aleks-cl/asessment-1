@@ -25,4 +25,5 @@ router.get('/survices', function(req, res, next) {
 router.get('/Contact', function(req, res, next) {
   res.render('index', { title: 'Contact_information' });
 });
+
 module.exports = router;

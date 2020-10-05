@@ -3,19 +3,22 @@
 
 <% if(title == "Home"){ %>
     
-    <img src="/public/assets/images/face.png" height="50" width="50">
-
     <main class="container"> 
 
         <div class="jumbotron">
-          <h1 class="display-5">Welecome to the: <%= title %> </h1>
-       
+          <h1 class="display-5">Welecome to the: <%= title %> </h1>       
         </div>
     <!-- words on page go here-->
         <div style="border:solid;">
             <p>
-            
+            Wellcome to my sight page, for more information please click the links below <br>
+            <a href="/Home">Home - here</a> <br>
+            <a href="/about">About me</a> <br>
+            <a href="/products">Products</a> <br>
+            <a href="/survices">Services</a> <br>
+            <a href="/contact">Contact me</a> <br>
             </p>
+            
                 </div>
     </main>
  
@@ -31,10 +34,19 @@
         </div>
     <!-- words on page go here-->
         <div style="border:solid;">
+            <h5>-Aleksander H. Chandler-Long </h5>
             <p>
             
+                About me: Hi, im aleks a canada born ontarian currently enroled in Centenial collage. <br> 
+                I have lived a simple life, working on what needed to be worked and travaling when the time is optimal. <br>
+                in my time i have been everything between an ice cream scooper to a volunteer local radio "produser" and most <br>
+                recently scout leader.<br>
+                <br>
+                currently i am studying softwere engeneering at centennial college, here in toronto. 
             </p>
                 </div>
+                <a href="/public/assets/pdf/resume_fake_project.pdf">my resume</a> <br>
+                <img src="/face.png"/> 
       </main>
       <% } %> 
   
@@ -46,11 +58,32 @@
           <h1 class="display-5">Welecome to the: <%= title %> </h1>
        
         </div>
-    <!-- words on page go here-->
+    <!-- words on page go here, i have no clue what to put for here. i havent realy done any noteworthy projects-->
         <div style="border:solid;">
+            <h4>Project 1 - tba</h4>
             <p>
-            
+             Placeholder text <br>
             </p>
+            <!--if i do a project image goes here-->
+            <img src="">
+
+
+            <h4>Project 2 - tba</h4>
+            <p>
+                <br>
+             Placeholder text <br>
+            </p>
+            <!--if i do a project image goes here-->
+            <img src="">
+
+            <h4>Project 3 - tba</h4>
+            <p>
+                <br>
+             Placeholder text <br>
+            </p>
+            <!--if i do a project image goes here-->
+            <img src="">
+
                 </div>
       </main>
       <% } %> 
@@ -81,11 +114,30 @@
        
         </div>
     <!-- words on page go here-->
-        <div style="border:solid;">
-            <p>
-            
-            </p>
-                </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Contact info - -Aleksander Chandler-Long</div>
+        <div class="panel-body">phone: 289-829-1629</div>
+        <div class="panel-body">email: Aleksandercl@hotmail.ca</div>
+      </div>    
+    
+    
+    <div style="border:solid;">
+            <div class="container">
+               <p> Message me here </p>
+                <form>
+                    <label>first name</label> <br>
+                    <input type="text" id="firstn" name="firstname"><br>
+                    <label>last name</label> <br>
+                    <input type="text" id="firstl" name="lastname"><br>
+                    <label>input Message</label> <br>
+                    <input type="textarea" id="Message" name="mess"><br>
+
+                    <input type="submit" value="Submit">
+
+               </form>
+
+
+            </div>
       </main>
       <% } %> 
       
