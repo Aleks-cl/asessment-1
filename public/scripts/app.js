@@ -1,10 +1,11 @@
-//Iiffy
-(function Start(){
-{
+// IIFE -- Immediately Invoked Function Expression
+(function(){
 
-    console.log("app started");
+    function Start()
+    {
+        console.log("App Started");
+    }
 
-}
-    window.addEventListener("Load", Start);
+    window.addEventListener("load", Start);
 
 })();

@@ -1,5 +1,4 @@
-//installed 3rd party stuff
-
+// installed 3rd party stuff
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
@@ -10,12 +9,10 @@ let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
 let app = express();
-//images and stuff hopefully
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); // express  -e
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -40,7 +37,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', { title: 'Error'});
 });
 
 module.exports = app;
