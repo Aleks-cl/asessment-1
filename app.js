@@ -10,6 +10,8 @@ let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
 let app = express();
+//images and stuff hopefully
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
