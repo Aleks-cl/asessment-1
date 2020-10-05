@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Hello, World! <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" /> 
+  <link rel="stylesheet" href="/contents/Assessment1.css"  />
+
+  
+
+</head>
+<body>
+    <!-- main nav here-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Assessment1-Aleksander C-l</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home"> <i class="fas fa-home"></i> Home </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/about"> <i class="fas fa-address-card"></i> About me </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/products"> <i class="fas fa-cogs"></i> Products </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/survices"> <i class="fas fa-th"></i> services </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contact"> <i class="fas fa-mobile-alt"></i> Contact me </a>
+        </li>
+    </div>
+  </nav>
+
+<main class="container"> 
+
+  <div class="jumbotron">
+    <h1 class="display-4">Welecome to the: <%= title %> page</h1>
+ 
+  </div>
+</main>
+
+  <p>Hello world</p>
+</body>
+<script src="/jquery/dist/jquery.min.js"></script>
+<script src="/@fortawesome/fontawesome-free/css/all.min.js"></script>
+<script src="/scripts/app.js"></script>
 </html>
+
