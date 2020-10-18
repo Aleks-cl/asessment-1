@@ -25,6 +25,9 @@ router.get('/survices', function(req, res, next) {
 router.get('/Contact', function(req, res, next) {
   res.render('index', { title: 'Contact_information' });
 });
-
+/* GET login page. */
+router.get('/login', function(req, res, next) {
+  res.render('index', { title: 'Contact_information' });
+});
 
 module.exports = router;
