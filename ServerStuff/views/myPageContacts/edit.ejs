@@ -1,0 +1,65 @@
+<%- include ../partals/headder.ejs %> 
+
+<%- include ../partals/main_nav.ejs %> 
+
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1> <br> <br> <%= title %> </h1>
+
+            <form class="form" method="POST">
+               
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="nameTextField"> Contact name </label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="enter contact name"
+                    name="name"
+                    value = "<%= Page.name %> "
+                     required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="contactsTextField"> Contact number </label>
+                    <input type="text" class="form-control"
+                    id="contactsTextField"
+                    placeholder="enter contact number"
+                    name="contact" 
+                    value = "<%= Page.contact %> "
+                    required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="EmailTextField"> Contact email </label>
+                    <input type="text" class="form-control"
+                    id="EmailTextField"
+                    placeholder="enter contact email"
+                    name="email" 
+                    value = "<%= Page.name %> "
+                    required
+                    >
+                </div>
+
+                <button class="btn btn-primary" type = "submit">
+                    <i class="fas fa-edit"></i> submit
+                </button>
+
+                <a href="/page-items" class="btn btn-warning"><i class="fas fa-undo"></i>cancel</a>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<%- include ../partals/bottom_nav.ejs %> 
+
+<%- include ../partals/footer.ejs %> 
