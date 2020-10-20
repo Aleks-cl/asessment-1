@@ -30,7 +30,7 @@ router.get('/tempReg', indexControl.disPlaytempReg );
 // post
 router.post('/tempReg', indexControl.prossessReg);
 //logout
-router.get('/logout');
+router.get('/logout', indexControl.logout);
 
 
 module.exports = router;

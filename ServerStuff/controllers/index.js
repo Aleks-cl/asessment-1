@@ -10,19 +10,19 @@ let userModel = require('../modles/user');
 let User = userModel.User;
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', { title: 'Home' });
+    res.render('index', { title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', { title: 'About_Me' });
+    res.render('index', { title: 'About_Me', displayName: req.user ? req.user.displayName : '' });
 }
 module.exports.displayProductsPage = (req, res, next) => {
-    res.render('index', { title: 'Products' });
+    res.render('index', { title: 'Products', displayName: req.user ? req.user.displayName : '' });
 }
 module.exports.displaySurvicesPage = (req, res, next) => {
-    res.render('index', { title: 'Survices' });
+    res.render('index', { title: 'Survices', displayName: req.user ? req.user.displayName : '' });
 }
 module.exports.displayContactMePage = (req, res, next) => {
-    res.render('index', { title: 'Contact_information' });
+    res.render('index', { title: 'Contact_information', displayName: req.user ? req.user.displayName : '' });
 }
 
 module.exports.displayLoginPage = (req,res,next) => {
@@ -99,14 +99,6 @@ module.exports.prossessReg = (req,res,next) => {
     })
 
 }
-
-
-
-
-
-
-
-
 
 module.exports.logout = (req, res, next) =>
     {

@@ -11,14 +11,14 @@ module.exports.displayContactsPage = (req,res, next) => {
            return console.error(err);
        }else{
            console.log(pageLists)
-           res.render('myPageContacts/mypage', {title: 'contact-list', PageLists: pageLists})
+           res.render('myPageContacts/mypage', {title: 'contact-list', PageLists: pageLists,  displayName: req.user ? req.user.displayName : ''})
        }
    
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('myPageContacts/add', {title: 'Add_Contacts'})
+    res.render('myPageContacts/add', {title: 'Add_Contacts',  displayName: req.user ? req.user.displayName : ''})
 
 }
 
@@ -54,7 +54,7 @@ module.exports.editPageShowStuff = (req, res, next) => {
                 console.log(err);
                 res.end(err);
             } else{
-                res.render('myPageContacts/edit', {title: 'Edit_Contacts', Page: pageToEdit })
+                res.render('myPageContacts/edit', {title: 'Edit_Contacts', Page: pageToEdit, displayName: req.user ? req.user.displayName : '' })
             }
     
         });

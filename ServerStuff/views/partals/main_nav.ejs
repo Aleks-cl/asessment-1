@@ -50,7 +50,20 @@
         <li class="nav-item ">
             <% } %> 
           <a class="nav-link" href="/page-items"> <i class="fas fa-address-book"></i>Contacts_list</a>
+
+        <% if(typeof displayName == 'string' && displayName) {%>   
+          
+          <li class="navbar-text"><i class="fas fa-large fa-user">Welcome: <%=displayName%> </i></li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i>  Logout</a>
+            </li>
+          
+          <% } else{ %>  
+<li class="nav-link"><a href="/login" class="nav-link"><i class="fas fa-lg fa-sign-in-alt"></i></a></li>
+          <% } %>  
+
         </li>
     </div>
   </nav>
 
+<table></table>
