@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-let indexControl = require('../controllers/index')
+let indexControl = require('../controllers/index');
 
 
 /* GET Home page. */
@@ -23,7 +23,7 @@ router.get('/Contact',indexControl.displayContactMePage);
 /* GET login page.  temp for this*/
 router.get('/login', indexControl.displayLoginPage );
 // post
-router.post('/login', ProssessLoginPage);
+router.post('/login', indexControl.ProssessLoginPage);
 //logout
 router.get('/logout');
 

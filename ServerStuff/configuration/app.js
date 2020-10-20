@@ -5,11 +5,13 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 // auth moduals
+let flash = require('connect-flash');
 let session = require('express-session');
 let passport = require('passport');
 let passportLocal = require('passport-local');
-let LocalStrategy = passportLocal.Strategy;
-let flash = require('connect-flash');
+let localStrategy = passportLocal.Strategy;
+
+
 
 //db setup
 let mongoose = require('mongoose');
@@ -25,7 +27,7 @@ mongodb.once('open', ()=> {console.log('connected to mongo')})
 let indexRouter = require('../routes/index' );
 let usersRouter = require('../routes/users' );
 let pageRouter  = require('../routes/mypage');
-const { Passport } = require('passport');
+
 
 let app = express();
 
@@ -40,18 +42,24 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/page-items', pageRouter);
 
+
+
 //express session
 app.use(session({
-secret: "secretStuff",
+secret: "someSecret",
 saveUninitialized: false,
 resave: false
 }));
+
 //flash stuff
 app.use(flash());
+
 //passport
 app.use(passport.initialize());
 app.use(passport.session());

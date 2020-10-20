@@ -1,7 +1,9 @@
 let express = require("express");
 let router = express.Router();
 let mongoose = require('mongoose');
+
 let passport = require('passport');
+
 
 //user model inst
 let userModel = require('../modles/user');
@@ -26,7 +28,8 @@ module.exports.displayContactMePage = (req, res, next) => {
 module.exports.displayLoginPage = (req,res,next) => {
     if(!req.user )
     {
-        res.render('auth/login' , {
+        res.render('auth/login', 
+        {
             title: "Login",
             messages: req.flash('LoginMessage'),
             displayName: req.user ? req.user.displayName : ''
@@ -38,7 +41,7 @@ module.exports.displayLoginPage = (req,res,next) => {
     }
 }
 module.exports.ProssessLoginPage = (req, res, next) => {
-
+    
     if(err)
     {
         return next(err);

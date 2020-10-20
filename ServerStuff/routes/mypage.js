@@ -1,27 +1,39 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose')
-// connect to page model
-let page = require ('../modles/my_page')
+let passport = require('passport');
+
 let pageControl = require('../controllers/page')
 
+
+// authentication
+
+
+function requiredAuth(req,res,next) {
+  if(!req.isAuthenticated()){
+
+return res.redirect('/login')
+  }
+  next();
+}
+
 //get rout for page list page - read op
-router.get('/', pageControl.displayContactsPage);
+router.get('/', requiredAuth ,pageControl.displayContactsPage);
 
 //get rout for page add - create op
-router.get('/add', pageControl.displayAddPage);
+router.get('/add',requiredAuth , pageControl.displayAddPage);
 
 //post rout for page add - create op
-router.post('/add', pageControl.prossessAddPage);
+router.post('/add', requiredAuth ,pageControl.prossessAddPage);
 
 //get rout for page edit - update op
-router.get('/edit/:id', pageControl.editPageShowStuff);
+router.get('/edit/:id', requiredAuth ,pageControl.editPageShowStuff);
 
 //post rout for page edit - update op
-router.post('/edit/:id', pageControl.prossessEdit);
+router.post('/edit/:id', requiredAuth ,pageControl.prossessEdit);
 
 //get rout for page remove - remove op
-router.get('/delete/:id', pageControl.deleteItem);
+router.get('/delete/:id',requiredAuth , pageControl.deleteItem);
 
 
 
