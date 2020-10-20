@@ -1,33 +1,31 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let indexControl = require('../controllers/index')
+
 
 /* GET Home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get('/', indexControl.displayHomePage);
 /* GET Home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get('/home',indexControl.displayHomePage);
+
 /* GET About me page. */
-router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About_Me' });
-});
+router.get('/about', indexControl.displayAboutPage);
+
 /* GET Products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
-});
+router.get('/products', indexControl.displayProductsPage);
+
 /* GET Survices me page. */
-router.get('/survices', function(req, res, next) {
-  res.render('index', { title: 'Survices' });
-});
+router.get('/survices', indexControl.displaySurvicesPage);
+
 /* GET Contact me page. */
-router.get('/Contact', function(req, res, next) {
-  res.render('index', { title: 'Contact_information' });
-});
-/* GET login page. */
-router.get('/login', function(req, res, next) {
-  res.render('index', { title: 'Contact_information' });
-});
+router.get('/Contact',indexControl.displayContactMePage);
+
+/* GET login page.  temp for this*/
+router.get('/login', indexControl.displayLoginPage );
+// post
+router.post('/login', ProssessLoginPage);
+//logout
+router.get('/logout');
+
 
 module.exports = router;
