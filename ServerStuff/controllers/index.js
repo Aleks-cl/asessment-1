@@ -90,7 +90,7 @@ module.exports.prossessReg = (req,res,next) => {
                 console.log(err);
 
             }else{
-            console.log(newUser)
+          //  console.log(newUser)
             res.redirect('/page-items')
                 }
 

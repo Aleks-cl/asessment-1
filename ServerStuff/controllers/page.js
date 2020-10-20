@@ -10,7 +10,7 @@ module.exports.displayContactsPage = (req,res, next) => {
        {
            return console.error(err);
        }else{
-           console.log(pageLists)
+           //console.log(pageLists)
            res.render('myPageContacts/mypage', {title: 'contact-list', PageLists: pageLists,  displayName: req.user ? req.user.displayName : ''})
        }
    
