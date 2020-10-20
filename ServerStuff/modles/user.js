@@ -13,14 +13,14 @@ let User = mongoose.Schema(
 
 
         },
-        /* password; 
+        /* password: 
           {
             type:String,
             default: "",
             trim: true,
             required: "password is required"
-        },
-        */
+        },*/
+        
         email:
         {
             type:String,

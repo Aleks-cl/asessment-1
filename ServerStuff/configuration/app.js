@@ -42,25 +42,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/page-items', pageRouter);
-
-
-
 //express session
 app.use(session({
-secret: "someSecret",
-saveUninitialized: false,
-resave: false
-}));
+  secret: "someSecret",
+  saveUninitialized: false,
+  resave: false
+  }));
+  
+  //flash stuff
+  app.use(flash());
 
-//flash stuff
-app.use(flash());
-
-//passport
+  //passport
 app.use(passport.initialize());
 app.use(passport.session());
 // pass User config
@@ -68,9 +60,18 @@ app.use(passport.session());
 //create user model instance
 let userModel = require('../modles/user');
 let User = userModel.User;
+// implement auth strat
+passport.use(User.createStrategy());
+
+
+
 // serialize and deserialize
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/page-items', pageRouter);
 
 
 // below taken by example work

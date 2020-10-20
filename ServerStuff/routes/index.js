@@ -25,6 +25,11 @@ router.get('/login', indexControl.displayLoginPage );
 // post
 router.post('/login', indexControl.ProssessLoginPage);
 //logout
+/* GET login page.  temp for this*/
+router.get('/tempReg', indexControl.disPlaytempReg );
+// post
+router.post('/tempReg', indexControl.prossessReg);
+//logout
 router.get('/logout');
 
 
